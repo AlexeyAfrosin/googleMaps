@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">googleMaps</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="marker_start">Старт</string>
+
+    <string name="default_address">Red Square, 1, Moscow</string>
+    <string name="button_search_map">Поиск</string>
+    <string name="search_address_hint">Введите адрес для поиска</string>
+    <string name="marker_name_hint">Имя метки</string>
+    <string name="marker_annotation_hint">Аннотация</string>
 </resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/ed_marker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5_dp"
+        android:layout_marginTop="@dimen/margin_top"
+        android:autofillHints="@string/marker_name_hint"
+        android:hint="@string/marker_name_hint"
+        android:inputType="textShortMessage"
+        android:labelFor="@string/marker_name_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Имя метки" />
+
+    <EditText
+        android:id="@+id/ed_marker_annotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5_dp"
+        android:layout_marginTop="@dimen/margin_top"
+        android:autofillHints="@string/marker_annotation_hint"
+        android:hint="@string/marker_annotation_hint"
+        android:inputType="textLongMessage"
+        android:labelFor="@string/marker_annotation_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_marker_name"
+        tools:text="Аннтотация" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hairline"
+        android:layout_marginTop="@dimen/margin_5_dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_marker_annotation" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
