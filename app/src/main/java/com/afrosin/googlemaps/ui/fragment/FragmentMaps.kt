@@ -12,6 +12,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.afrosin.googlemaps.R
 import com.afrosin.googlemaps.databinding.FragmentMapsBinding
+import com.afrosin.googlemaps.mvp.model.MapMarker
 import com.afrosin.googlemaps.mvp.presenter.FragmentMapsPresenter
 import com.afrosin.googlemaps.mvp.view.FragmentMapsView
 import com.afrosin.googlemaps.ui.App
@@ -35,7 +36,7 @@ class FragmentMaps : MvpAppCompatFragment(), FragmentMapsView {
     private lateinit var _binding: FragmentMapsBinding
     private val binding get() = _binding
 
-    private val markers: ArrayList<Marker> = arrayListOf()
+    private val markers: ArrayList<MapMarker> = arrayListOf()
 
     private val requestPermission =
         registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {}
@@ -105,7 +106,7 @@ class FragmentMaps : MvpAppCompatFragment(), FragmentMapsView {
     private fun addMarkerToArray(location: LatLng) {
         val marker =
             setMarker(location, markers.size.toString(), R.drawable.ic_map_pin)
-        markers.add(marker)
+        markers.add(MapMarker(marker.title, marker.position))
     }
 
     private fun setMarker(location: LatLng, title: String, resourceId: Int): Marker {

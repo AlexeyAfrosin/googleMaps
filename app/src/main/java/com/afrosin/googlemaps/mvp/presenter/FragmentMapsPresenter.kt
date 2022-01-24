@@ -1,10 +1,9 @@
 package com.afrosin.googlemaps.mvp.presenter
 
+import com.afrosin.googlemaps.mvp.model.MapMarker
 import com.afrosin.googlemaps.mvp.view.FragmentMapsView
 import com.afrosin.googlemaps.navigation.Screens
 import com.github.terrakok.cicerone.Router
-import com.github.terrakok.cicerone.Screen
-import com.google.android.gms.maps.model.Marker
 import moxy.InjectViewState
 import moxy.MvpPresenter
 import javax.inject.Inject
@@ -21,7 +20,7 @@ class FragmentMapsPresenter : MvpPresenter<FragmentMapsView>() {
         viewState.getMap()
     }
 
-    fun editMarkers(markers: ArrayList<Marker>) {
+    fun editMarkers(markers: ArrayList<MapMarker>) {
         router.navigateTo(Screens.onFragmentMapMarkersScreen(markers))
     }
 

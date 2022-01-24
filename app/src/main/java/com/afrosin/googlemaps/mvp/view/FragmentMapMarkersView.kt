@@ -6,5 +6,7 @@ import moxy.viewstate.strategy.StateStrategyType
 
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface FragmentMapMarkersView : MvpView {
+
     fun init()
+    fun updateMarkersAdapter()
 }
